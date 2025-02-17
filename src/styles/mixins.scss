@@ -1,0 +1,34 @@
+@mixin on-phone {
+  @media (max-width: $phone-width) {
+    @content;
+  }
+}
+
+@mixin on-tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (max-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin responsive-border() {
+  @include on-desktop() {
+    border-width: 3px;
+  }
+
+  @include on-tablet() {
+    border-width: 2px;
+  }
+}
+
+@mixin logo-style($width, $image) {
+  background-image: url($image);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: $width;
+}

@@ -1,0 +1,30 @@
+.button {
+  font-family: 'SamsungOne', sans-serif;
+  position: absolute;
+  z-index: 5;
+  bottom: calc($block-height * 0.06);
+  left: $padding;
+  height: $button-height;
+  width: calc($block-width * 0.16);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: 550;
+  font-size: 24px;
+  border: 3px solid $color-black;
+  border-radius: 58px;
+  background-color: transparent;
+  animation: pulse 3.5s infinite;
+  @include responsive-border;
+
+  &--show {
+    display: flex;
+    cursor: pointer;
+  }
+
+  @include on-desktop {
+    width: 165px;
+    z-index: 9;
+    backdrop-filter: blur(8px);
+  }
+}

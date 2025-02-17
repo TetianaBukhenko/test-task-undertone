@@ -1,0 +1,54 @@
+.logo {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: calc($block-height * 0.045);
+  top: 2.4vw;
+  z-index: 6;
+
+  &--main {
+    background-image: url('../images/logo-main.png');
+    width: calc($block-width * 0.14);
+    animation: show-logo 2s ease-in-out;
+
+    @include on-tablet {
+      width: 25vw;
+    }
+  }
+
+  &--secondary {
+    background-image: url('../images/logo-second.png');
+    width: calc($block-width * 0.2);
+    right: $padding;
+    z-index: 9;
+
+    @include on-tablet {
+      width: 30vw;
+    }
+  }
+
+  &--kitchn {
+    background-image: url('../images/kitchn-logo.png');
+    width: 110px;
+    z-index: 9;
+    height: 1.8rem;
+    display: inline-block;
+
+    @include on-phone {
+      height: 24px;
+      width: 90px;
+    }
+  }
+}
+
+@keyframes show-logo {
+  0% {
+    transform: translateX(-100%) translateY(100%);
+  }
+  50% {
+    transform: translateX(0) translateY(100%);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}

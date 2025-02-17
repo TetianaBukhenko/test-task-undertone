@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  min-height: 100vh;
+  background-image: url(/src/images/bg.png);
+  background-size: cover;
+  background-position: center;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include on-phone {
+    min-width: 360px;
+    overflow-x: scroll;
+  }
+}
+
+.block {
+  background: $color-white;
+  border: 3px solid $color-black;
+  min-height: $block-height;
+  width: $block-width;
+  position: relative;
+  display: flex;
+
+  @include responsive-border;
+
+  @include on-desktop {
+    width: 100%;
+    max-width: 90vw;
+  }
+
+  @include on-tablet {
+    flex-direction: column;
+    margin: 5vw;
+    padding-top: $min-gap;
+    min-width: 340px;
+  }
+}
+
+.block-1 {
+  position: absolute;
+  margin-left: $padding;
+  overflow-x: hidden;
+  z-index: 2;
+  height: 50%;
+  width: 100%;
+}
+
+.info {
+  width: 0;
+  flex-grow: 0;
+  font-family: $font-primary;
+  position: relative;
+  overflow-x: hidden;
+  padding-block: calc($block-height * 0.45)
+    calc($bottom-padding + $button-height + $min-gap);
+
+  @include on-tablet {
+    padding-bottom: $min-gap;
+    height: 400px;
+  }
+
+  &--show {
+    transition: all 0.9s;
+    box-sizing: border-box;
+    flex-grow: 1;
+    margin-inline: $padding $padding-txt-right;
+    width: calc($block-width * 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: $min-gap;
+
+    @include on-desktop {
+      width: 100%;
+      max-width: 65vw;
+    }
+
+    @include on-tablet {
+      max-width: 85vw;
+      margin-inline: $padding;
+      height: 400px;
+    }
+
+    @include on-phone {
+      height: 450px;
+      min-width: 340px;
+    }
+
+    &.move-up {
+      padding-top: calc($block-height * 0.4);
+    }
+  }
+
+  &__main {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: $font-bold;
+    position: absolute;
+    z-index: 5;
+    top: calc($block-height * 0.2);
+
+    @include on-phone {
+      font-size: 22px;
+    }
+
+    sup {
+      font-size: 0.5rem;
+    }
+
+    &.move-up {
+      transition: top 0.2s;
+      top: calc($block-height * 0.15);
+    }
+  }
+
+  &__secondary {
+    // padding-bottom: calc($block-height * 0.02);
+    font-size: 1rem;
+    font-family: $font-medium;
+
+    sup {
+      font-size: 0.2rem;
+    }
+
+    &-1 {
+      flex-grow: 1;
+
+      @include on-tablet {
+        height: 400px;
+        padding-block: $min-gap;
+      }
+    }
+  }
+}
+
+.text {
+  position: absolute;
+  overflow-x: hidden;
+}
+
+.control {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  font-family: $font-bold;
+
+  & > p {
+    width: 2em;
+    text-align: center;
+  }
+}
+
+.arrow {
+  height: 14px;
+  width: 14px;
+  cursor: pointer;
+  background-image: url(../images/icons/arrow.png);
+
+  &--right {
+    rotate: 180deg;
+  }
+}
+
+.link {
+  color: $color-gray;
+  text-decoration: none;
+  cursor: pointer;
+}

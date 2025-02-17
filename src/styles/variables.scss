@@ -1,0 +1,21 @@
+$phone-small-width: 400px;
+
+$phone-width: 639px;
+$tablet-width: 815px;
+$desktop-width: 1350px;
+
+$block-width: 70vw;
+$block-height: 85vh;
+$padding: calc($block-width * 0.035);
+$padding-txt-right: calc($block-width * 0.1);
+$button-height: calc($block-height * 0.11);
+$bottom-padding: calc($block-height * 0.06);
+$min-gap: 24px;
+
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #808080;
+
+$font-primary: 'Samsung Sharp Sans', sans-serif;
+$font-bold: 'Samsung Sharp Sans Bold', sans-serif;
+$font-medium: 'Samsung Sharp Sans Medium', sans-serif;

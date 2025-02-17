@@ -1,0 +1,27 @@
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.show-from-right {
+  animation: show-from-right 0.5s linear 1;
+  visibility: visible;
+  transition: all 0.2s;
+  opacity: 1;
+  z-index: 6;
+}
+
+.show-from-left {
+  animation: show-from-left 0.5s linear 1;
+  visibility: visible;
+  transition: all 0.2s;
+  opacity: 1;
+  z-index: 6;
+}
