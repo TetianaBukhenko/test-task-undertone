@@ -10,6 +10,7 @@
     background-image: url('../images/logo-main.png');
     width: calc($block-width * 0.14);
     animation: show-logo 2s ease-in-out;
+    max-width: 150px;
 
     @include on-tablet {
       width: 25vw;
@@ -21,6 +22,7 @@
     width: calc($block-width * 0.2);
     right: $padding;
     z-index: 9;
+    max-width: 200px;
 
     @include on-tablet {
       width: 30vw;

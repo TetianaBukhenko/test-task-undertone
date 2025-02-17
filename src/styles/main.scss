@@ -17,7 +17,6 @@ body {
 
   @include on-phone {
     min-width: 360px;
-    overflow-x: scroll;
   }
 }
 
@@ -67,11 +66,12 @@ body {
     height: 400px;
   }
 
+
   &--show {
     transition: all 0.9s;
     box-sizing: border-box;
     flex-grow: 1;
-    margin-inline: $padding $padding-txt-right;
+    padding-inline: $padding $padding-txt-right;
     width: calc($block-width * 0.7);
     display: flex;
     flex-direction: column;
@@ -85,17 +85,27 @@ body {
 
     @include on-tablet {
       max-width: 85vw;
-      margin-inline: $padding;
+      padding-inline: $padding;
       height: 400px;
     }
 
     @include on-phone {
+      padding-top: 100px;
       height: 450px;
-      min-width: 340px;
+      min-width: 320px;
     }
 
     &.move-up {
       padding-top: calc($block-height * 0.4);
+
+      @include on-tablet {
+        padding-top: 220px;
+      }
+
+      @include on-phone {
+        padding-top: 170px;
+      }
+
     }
   }
 
@@ -122,9 +132,15 @@ body {
   }
 
   &__secondary {
-    // padding-bottom: calc($block-height * 0.02);
+    margin: 0;
     font-size: 1rem;
     font-family: $font-medium;
+    padding-block: 20px;
+    padding-right: $padding-txt-right;
+
+    @include on-desktop {
+      padding-right: $padding;
+    }
 
     sup {
       font-size: 0.2rem;
@@ -135,7 +151,6 @@ body {
 
       @include on-tablet {
         height: 400px;
-        padding-block: $min-gap;
       }
     }
   }
@@ -174,4 +189,5 @@ body {
   color: $color-gray;
   text-decoration: none;
   cursor: pointer;
+  white-space: nowrap;
 }
