@@ -31,10 +31,10 @@
 
 @keyframes show-from-right {
   0% {
-    transform: translateX(100px);
+    transform: translateX(50px);
   }
   50% {
-    transform: translateX(50px);
+    transform: translateX(25px);
   }
   100% {
     transform: translateX(0);
@@ -43,10 +43,10 @@
 
 @keyframes show-from-left {
   0% {
-    transform: translateX(-100px);
+    transform: translateX(-50px);
   }
   50% {
-    transform: translateX(-50px);
+    transform: translateX(-25px);
   }
   100% {
     transform: translateX(0);

@@ -11,7 +11,7 @@
 }
 
 .show-from-right {
-  animation: show-from-right 0.5s linear 1;
+  animation: show-from-right 1s linear 1;
   visibility: visible;
   transition: all 0.2s;
   opacity: 1;
@@ -19,7 +19,7 @@
 }
 
 .show-from-left {
-  animation: show-from-left 0.5s linear 1;
+  animation: show-from-left 1s linear 1;
   visibility: visible;
   transition: all 0.2s;
   opacity: 1;

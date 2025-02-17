@@ -71,12 +71,16 @@ body {
     transition: all 0.9s;
     box-sizing: border-box;
     flex-grow: 1;
-    padding-inline: $padding $padding-txt-right;
+    padding-left: $padding;
     width: calc($block-width * 0.7);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: $min-gap;
+    overflow-x: hidden;
+
+    margin-right: $padding-txt-right;
+
 
     @include on-desktop {
       width: 100%;
@@ -85,7 +89,7 @@ body {
 
     @include on-tablet {
       max-width: 85vw;
-      padding-inline: $padding;
+      margin-right: $padding;
       height: 400px;
     }
 
@@ -136,11 +140,6 @@ body {
     font-size: 1rem;
     font-family: $font-medium;
     padding-block: 20px;
-    padding-right: $padding-txt-right;
-
-    @include on-desktop {
-      padding-right: $padding;
-    }
 
     sup {
       font-size: 0.2rem;
@@ -148,7 +147,6 @@ body {
 
     &-1 {
       flex-grow: 1;
-
       @include on-tablet {
         height: 400px;
       }
