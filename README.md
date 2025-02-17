@@ -3,7 +3,7 @@
 This is a test task for Undertone. 
 
 ## Demo
-https://test-task-energosoft.vercel.app/
+https://test-task-undertone.vercel.app/
 
 ## Technologies
 JavaScript, CSS, SASS, HTML.
